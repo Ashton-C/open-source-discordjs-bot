@@ -24,16 +24,6 @@ if (!message.content.startsWith(prefix)) return
 
 //FILES: Sets all the informations needed to read the commands
 let files = fs.readdirSync(`./commands/`)
-// let comFiles = []
-// files.forEach(dir => {
-//     client.com = new Discord.Collection();
-// const cmdFiles = fs.readdirSync(`../../commands/${dir}`).filter(file => file.endsWith('.js'));
-// for(const file of cmdFiles){
-//     const com2 = require(`../../commands/${file}`); 
-//     client.com.set(com2.name, com2);
-// }
-// comFiles = comFiles.concat(cmdFiles)
-// })
 const comFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 
 //LIBRARIES: Loads stringSimilarity, needed for sorting commands and giving the suggestion
@@ -84,7 +74,7 @@ time_stamps.set(message.author.id, current_time);
 setTimeout(() => time_stamps.delete(message.author.id), cooldown_amount);
 
 //PERMISSIONS: Checks if the permission of the command its OWNER (only the owner can use the command)
-     if(command) {
+if(command) {
 const perms = command.permitions
 const botPerms = command.botPerms
 if(perms === "OWNER") {

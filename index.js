@@ -1,8 +1,6 @@
 //LIBRARIES: Load libraries and files
 const Discord = require('discord.js'); //Necessary to connect to Discord API
 const client = new Discord.Client(); //Creates a Client object, basically our bot
-const Database = require("@replit/database") //Requires replit database package
-const db = new Database() //Creates a Database object
 
 //HANDLERS: Loading handlers collections (event handler, command handler)
 client.commands = new Discord.Collection(); //This for command handler

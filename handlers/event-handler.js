@@ -13,3 +13,4 @@ module.exports = (client, Discord) =>{
 
 ['client', 'guild'].forEach(e => load_dir(e));
 }
+//Taken from the YouTuber CodeLyon: https://www.youtube.com/channel/UC08G-UJT58SbkdmcOYyOQVw
